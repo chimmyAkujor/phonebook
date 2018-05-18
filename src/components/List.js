@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './List.css';
 import Group from './Group';
 
 class List extends Component{
