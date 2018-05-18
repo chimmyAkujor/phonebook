@@ -1,0 +1,21 @@
+function makeList(charA,charZ){
+    var i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
+    var list = document.createElement('ul');
+    for(; i<=j;++i){
+        var li = document.createElement('li');
+
+        list.appendChild(li);
+        li.innerHTML=li.innerHTML + String.fromCharCode(i);
+    }
+    list.appendChild(li);
+    li.innerHTML = li.innerHTML + "#";
+}
+
+function genCharArray(charA, charZ) {
+    var a = [], i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
+    for (; i <= j; ++i) {
+        a.push(String.fromCharCode(i));
+    }
+    return a;
+}
+genCharArray('a', 'z');
