@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './List.css';
 import Group from './Group';
+import Contact from './Contact';
 
 class List extends Component{
         render(){
