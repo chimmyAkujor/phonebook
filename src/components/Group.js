@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Contact from './Contact';
+import React from 'react';
 
 const Group = (props)=>(
   <div>

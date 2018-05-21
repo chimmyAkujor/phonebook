@@ -3,7 +3,7 @@ import './Button.css';
 
 const Button =()=>(
     <div className="button">
-        <i class="fa fa-plus" aria-hidden="true"></i>
+        <i className="fa fa-plus" aria-hidden="true"></i>
     </div>
 )
 

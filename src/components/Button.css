@@ -1,6 +1,6 @@
 .button{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 100%;
     background-color: royalblue;
     text-align: center;
@@ -15,6 +15,6 @@
     opacity: 1;
 }
  i {
-    margin-top: 37%;
+    margin-top: 33%;
     color: aliceblue;
 }
