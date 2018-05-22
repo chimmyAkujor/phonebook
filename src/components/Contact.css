@@ -1,3 +1,7 @@
 .top{
     border-top: 1px rgb(235, 235, 235) solid;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
