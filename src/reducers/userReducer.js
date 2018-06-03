@@ -8,16 +8,9 @@ export default function reducer(state={
 },action){
     switch(action.type){
         case "SET_USER":{
-            console.log("set user "+action.payload.first);
-            return{
-                user:{first:action.payload.first,
-                      last:action.payload.last}
-            }
+            state = {...state,user:action.payload}
             break;
         }
-        default:{
-            return {...state.user};
-        }
     }
-    
+    return state;
 }

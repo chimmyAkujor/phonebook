@@ -5,13 +5,11 @@ import Contact from './Contact'
 import Group from './Group'
 import Profile from './Profile'
 
-
-
 class List extends Component{
 
     renderContacts=()=>{            //populate an array with fist letter of firstnames
         let indexes = [];
-        let numFlag = false;        //flag for name starting with a number
+        let numFlag = false;        //flag for names starting with a number
         let contacts = this.props.contacts;
         for(var a = 0; a<contacts.length;a++){//populate array of index
             var index = contacts[a].firstName[0];
@@ -27,14 +25,14 @@ class List extends Component{
                 return(
                     <Fragment key={Math.random()}>
                         <Group key={Math.random()} title={"#"}/>
-                        <Contact key={i} contact={contact}/>
+                        <Contact key={i} id={i} contact={contact}/>
                     </Fragment>
                 )
             }
             else if(numFlag===true && !(isNaN(contact.firstName[0]))){  //if !first index that's a number
                 numFlag = true;
                 return(
-                    <Contact key={i} contact={contact} className="top"/>
+                    <Contact key={i} id={i} contact={contact} className="hr"/>
                 )
             }
             else if(ind >-1){                                           //if index exist render and pop from list of index
@@ -42,23 +40,21 @@ class List extends Component{
                 return (
                     <Fragment key={Math.random()}>
                         <Group key={Math.random()} title={contact.firstName[0]}/>
-                        <Contact key={i} contact={contact}/>
+                        <Contact key={i} id={i} contact={contact}/>
                     </Fragment>
                 )
             }
-            return <Contact key={i} contact={contact} className="top"/> //else just return the contact to the list
-
-            
+            return <Contact key={i} id={i} contact={contact} className="hr"/> //else just return the contact to the list
     })
     }
         render(){
-        return(
-            <div>
-                <Profile/>
-                {this.renderContacts()}
-                <Button/>
-            </div>
-        )
+            return(
+                <div>
+                    <Profile/>
+                    {this.renderContacts()}
+                    <Button/>
+                </div>
+            )
         }
 }
 
